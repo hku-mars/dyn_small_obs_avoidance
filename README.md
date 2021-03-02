@@ -11,7 +11,8 @@ This repository is used for UAV dynamic small obstacles avoidance. It is a compl
 The source code will be available by April.
 
 Related paper:
-"Avoiding dynamic small obstacles with onboard sensing and computating on aerial robots", will be available on arxiv soon.
+"Avoiding dynamic small obstacles with onboard sensing and computating on aerial robots", 
+available on arxiv now https://arxiv.org/abs/2103.00406.
 
 Related video:
 https://youtu.be/pBHbQ_J1Qhc
