@@ -58,7 +58,6 @@ And play the bag by:
 ### 3.3 Set target point
 ```
     rostopic pub /goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: "camera_init"}, pose: {position: {x: 5.0, y: 0.0, z: 1.0}, orientation: {w: 1.0}}}'
-
 ```
 You can change the target point by setting different value of 'x','y','z' in the above command.
 
@@ -66,7 +65,7 @@ You can change the target point by setting different value of 'x','y','z' in the
 You can also run this planning program as a module with other point cloud input from other sensors (like depth camera D435i). But we have not yet test it on depth cameras.
 First, change the point cloud topic to your point cloud topic name in path_planning/launch/demo_withNOlidar.launch
 ```
-        <remap from='/your_pointcloud_topic' to='/cloud_registered'/> 
+    <remap from='/your_pointcloud_topic' to='/cloud_registered'/> 
 ```
 Then, start the program:
 ```
