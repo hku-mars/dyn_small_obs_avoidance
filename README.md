@@ -16,3 +16,53 @@ available on arxiv now https://arxiv.org/abs/2103.00406.
 
 Related video:
 https://youtu.be/pBHbQ_J1Qhc
+
+ 
+## 1. Prerequisites
+As the same as the prerequisites as FAST-LIO.
+### 1.1 **Ubuntu** and **ROS**
+Ubuntu >= 18.04.
+
+ROS    >= Melodic. [ROS Installation](http://wiki.ros.org/ROS/Installation)
+
+### 1.2. **PCL && Eigen**
+PCL    >= 1.8,   Follow [PCL Installation](http://www.pointclouds.org/downloads/linux.html).
+
+Eigen  >= 3.3.4, Follow [Eigen Installation](http://eigen.tuxfamily.org/index.php?title=Main_Page).
+
+### 1.3. **livox_ros_driver**
+Follow [livox_ros_driver Installation](https://github.com/Livox-SDK/livox_ros_driver).
+
+
+## 2. Build
+Clone the repository and catkin_make:
+
+```
+    cd ~/catkin_ws/src
+    git clone https://github.com/hku-mars/dyn_small_obs_avoidance.git
+    cd ..
+    catkin_make
+    source devel/setup.bash
+```
+# 3.Run demo
+### 3.１ Start program
+```
+    source devel/setup.bash
+    roslaunch path_planning demo.launch 
+```
+
+### 3.2 Run rosbag or directly fly
+You can download our demos rosbag from https://drive.google.com/drive/folders/1knQwnrbwunGIvXzOL6wWKkCtOkGE22bG?usp=sharing
+And play the bag by:
+```
+    rosbag play XXX.bag
+```
+
+### 3.3 Set target point
+```
+    rostopic pub /goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: "camera_init"}, pose: {position: {x: 5.0, y: 0.0, z: 1.0}, orientation: {w: 1.0}}}'
+
+```
+
+## 5.Acknowledgments
+Thanks for FAST-PLANNER(Zhou, Boyu and Gao, Fei and Wang, Luqi and Liu, Chuhao and Shen, Shaojie. Robust and efficient quadrotor trajectory generation for fast autonomous flight), [FAST-PLANNER](https://github.com/HKUST-Aerial-Robotics/Fast-Planner.git).

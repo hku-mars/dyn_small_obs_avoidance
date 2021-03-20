@@ -1,0 +1,33 @@
+<launch>
+    
+
+  <include file="$(find fast_lio)/launch/mapping_avia.launch" />
+
+  <!-- This node will launch livox driver -->
+  <include file="$(find livox_ros_driver)/launch/livox_lidar_msg.launch"/>
+
+  <!-- This node will launch MAVROS -->
+  <!-- <include file="$(find mavros)/launch/px4.launch"/> -->
+
+  <node  pkg="rviz" type="rviz" name="rviz" args="-d $(find path_planning)/launch/fiesta.rviz" />
+
+  <!-- <include file="$(find offboard_pkg)/launch/octomap_server.launch" /> -->
+
+<rosparam>
+  search/max_tau : 0.6
+  search/init_max_tau : 0.8
+  search/max_vel : 2.0
+  search/max_acc : 2.0
+  search/w_time  : 10.0
+  search/horizon  : 100.0
+  search/lambda_heu  : 5.0
+  search/resolution_astar  : 0.1
+  search/time_resolution  : 0.8
+  search/margin  : 0.2
+  search/allocate_num  : 100000
+  search/check_num  : 1
+</rosparam>
+
+  <node  pkg="path_planning" type="path_planning_node" name="path_planning_node1" args="" output="screen">
+  </node> 
+</launch>
