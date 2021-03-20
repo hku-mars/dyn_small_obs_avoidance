@@ -1,10 +1,5 @@
 <launch>
 
-  <include file="$(find fast_lio)/launch/mapping_avia.launch" />
-
-  <!-- This node will launch livox driver -->
-  <include file="$(find livox_ros_driver)/launch/livox_lidar_msg.launch"/>
-
   <!-- This node will launch MAVROS -->
   <!-- <include file="$(find mavros)/launch/px4.launch"/> -->
 
@@ -26,5 +21,6 @@
 </rosparam>
 
   <node  pkg="path_planning" type="path_planning_node" name="path_planning_node1" args="" output="screen">
+          <remap from='/your_pointcloud_topic' to='/cloud_registered'/> 
   </node> 
 </launch>
