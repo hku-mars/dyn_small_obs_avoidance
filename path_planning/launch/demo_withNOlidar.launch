@@ -3,7 +3,7 @@
   <!-- This node will launch MAVROS -->
   <!-- <include file="$(find mavros)/launch/px4.launch"/> -->
 
-  <node  pkg="rviz" type="rviz" name="rviz" args="-d $(find path_planning)/launch/fiesta.rviz" />
+  <node  pkg="rviz" type="rviz" name="rviz" args="-d $(find path_planning)/launch/demo.rviz" />
 
 <rosparam>
   search/max_tau : 0.6
