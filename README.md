@@ -28,9 +28,6 @@ PCL    >= 1.8,   Follow [PCL Installation](https://pointclouds.org/downloads/).
 
 Eigen  >= 3.3.4, Follow [Eigen Installation](http://eigen.tuxfamily.org/index.php?title=Main_Page).
 
-### 1.3. **livox_ros_driver**
-Follow [livox_ros_driver Installation](https://github.com/Livox-SDK/livox_ros_driver).
-
 
 ## 2. Build
 Clone the repository and catkin_make:
